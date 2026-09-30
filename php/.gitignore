@@ -1,0 +1,6 @@
+/vendor
+/composer.lock
+/coverage_report
+/.idea/*
+!/.idea/runConfigurations/
+.DS_Store

@@ -1,0 +1,18 @@
+{
+  "days": 14,
+  "items": [
+    {"name": "+5 Dexterity Vest", "sellIn": 3, "quality": 10},
+    {"name": "Aged Brie", "sellIn": 2, "quality": 46},
+    {"name": "Elixir of the Mongoose", "sellIn": 1, "quality": 7},
+    {"name": "Sulfuras, Hand of Ragnaros", "sellIn": 0, "quality": 80},
+    {"name": "Backstage passes to a TAFKAL80ETC concert", "sellIn": 12, "quality": 20},
+    {"name": "Conjured Mana Cake", "sellIn": 3, "quality": 6}
+  ],
+  "rules": [
+    {"id": "R-LEGENDARY", "pattern": "Sulfuras*", "freeze": true},
+    {"id": "R-AGING", "pattern": "Aged Brie", "delta": 1, "expired": 1, "clamp": true, "min": 0, "max": 50},
+    {"id": "R-EVENT", "pattern": "Backstage passes*", "delta": 1, "steps": [{"below": 11, "delta": 1}, {"below": 6, "delta": 1}], "zeroWhenExpired": true, "clamp": true, "min": 0, "max": 50},
+    {"id": "R-CONJURED", "pattern": "Conjured*", "delta": -2, "expired": -2, "clamp": true, "min": 0, "max": 50},
+    {"id": "R-NORMAL", "pattern": "*", "delta": -1, "expired": -1, "clamp": true, "min": 0, "max": 50}
+  ]
+}

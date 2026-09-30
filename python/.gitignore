@@ -1,0 +1,5 @@
+/.idea/*
+!/.idea/runConfigurations
+!/.idea/scopes
+__pycache__/
+*.py[cod]
